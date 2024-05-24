@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PrintersWorld - Современные принтеры для любых задач</title>
+    <link rel="stylesheet" href="styles.css">
+    <script defer src="scripts.js"></script>
+</head>
+<body>
+    <header>
+        <h1>PrintersWorld</h1>
+        <p>Современные принтеры для любых задач</p>
+    </header>
+    <main>
+        <h2>Найдите идеальный принтер!</h2>
+        <div class="filters">
+            <label for="priceRange">Цена: <span id="priceValue">100000</span> рублей</label>
+            <input type="range" id="priceRange" min="5000" max="100000" value="50000" step="1000" oninput="updatePriceValue()">
+            <button onclick="filterProducts('favorite')">Показать избранное</button>
+            <button onclick="filterProducts('new')">Показать Новинки</button>
+            <button onclick="filterProducts('all')">Показать всё</button>
+        </div>
+        <div class="product-gallery">
+            <div class="product" data-price="22599" data-favorite="false" data-new="true">
+                <img src="printer1.jpg" alt="Принтер 1">
+                <h3>Canon PIXMA G3420</h3>
+                <p>Высокое качество печати для профессиональной работы.</p>
+                <p>Цена: 22 599 ₽ рублей</p>
+                <span class="favorite-icon" onclick="toggleFavorite(this)">&#9734;</span>
+                <span class="new-flag">Новинка</span>
+            </div>
+            <div class="product" data-price="34999" data-favorite="false" data-new="false">
+                <img src="printer2.jpg" alt="Принтер 2">
+                <h3>Epson L4260</h3>
+                <p>Высокая скорость печати для идеального опыта.</p>
+                <p>Цена: 34 999 ₽ рублей</p>
+                <span class="favorite-icon" onclick="toggleFavorite(this)">&#9734;</span>
+            </div>
+            <div class="product" data-price="24599" data-favorite="false" data-new="true">
+                <img src="printer3.jpg" alt="Принтер 3">
+                <h3>Epson L3256</h3>
+                <p>Хорошее качество по доступной цене.</p>
+                <p>Цена: 24 599 ₽ рублей</p>
+                <span class="favorite-icon" onclick="toggleFavorite(this)">&#9734;</span>
+                <span class="new-flag">Новинка</span>
+            </div>
+            <div class="product" data-price="95000" data-favorite="false" data-new="false">
+                <img src="printer4.jpg" alt="Принтер 4">
+                <h3>Epson L14150</h3>
+                <p>Отличное качество печати для просмотра деталей.</p>
+                <p>Цена: 94 499 ₽ рублей</p>
+                <span class="favorite-icon" onclick="toggleFavorite(this)">&#9734;</span>
+            </div>
+            <div class="product" data-price="47499" data-favorite="false" data-new="true">
+                <img src="printer5.jpg" alt="Принтер 5">
+                <h3>Epson EcoTank L5290</h3>
+                <p>Для профессиональных пользователей и энтузиастов.</p>
+                <p>Цена: 47 499 ₽ рублей</p>
+                <span class="favorite-icon" onclick="toggleFavorite(this)">&#9734;</span>
+                <span class="new-flag">Новинка</span>
+            </div>
+	    <div class="product" data-price="66999" data-favorite="false" data-new="false">
+                <img src="printer6.jpg" alt="Принтер 6">
+                <h3>Epson L6490</h3>
+                <p>Отличный выбор для дома и офиса.</p>
+                <p>Цена: 66 999 ₽ рублей</p>
+                <span class="favorite-icon" onclick="toggleFavorite(this)">&#9734;</span>
+            </div>
+        </div>
+    </main>
+</body>
+</html>
